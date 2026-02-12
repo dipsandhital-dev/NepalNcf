@@ -47,15 +47,21 @@ const Header = () => {
                 </ScrollLink>
               </li>
             ))}
+
+            {/* Quick Meet Button */}
+            <li>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition cursor-pointer"
+              >
+                Quick Meet
+              </ScrollLink>
+            </li>
           </ul>
         </nav>
-
-        {/* Call to Action Button */}
-        <div className="hidden md:block">
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
-            Donate
-          </button>
-        </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -91,10 +97,18 @@ const Header = () => {
             </li>
           ))}
 
+          {/* Quick Meet Button for Mobile */}
           <li>
-            <button className="w-full bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
-              Donate
-            </button>
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition text-center block cursor-pointer"
+            >
+              Quick Meet
+            </ScrollLink>
           </li>
         </ul>
       </div>
